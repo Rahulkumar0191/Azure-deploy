@@ -13,7 +13,8 @@ pipeline {
     }  
       stage ('Build') {
       steps {
-        sh 'mvn clean test compile'
+        sh '''cd /home/software/test/Java_Test/CubeGenerator
+              mvn clean test compile package'''
       }
     }
   }
