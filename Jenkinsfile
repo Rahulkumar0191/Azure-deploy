@@ -8,7 +8,7 @@ pipeline {
     }
     stage ('Repo_checkout') {
       steps {
-         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '/home/workspace/${JOB_NAME}']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Rahulkumar0191/Java_Test.git']]])
+         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Rahulkumar0191/Java_Test.git']]])
       }
     }  
       stage ('Build') {
