@@ -13,7 +13,7 @@ pipeline {
     }  
       stage ('Build') {
       steps {
-        sh '''cd /home/jenkins/workspace/${JOB_NAME}CubeGenerator
+        sh '''cd /home/jenkins/workspace/${JOB_NAME}/CubeGenerator
               mvn clean test compile package'''
       }
     }
